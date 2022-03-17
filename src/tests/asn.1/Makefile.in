@@ -31,7 +31,7 @@ krb5_decode_leak: $(LEAKOBJS) $(KRB5_BASE_DEPLIBS)
 	$(CC_LINK) -o krb5_decode_leak $(LEAKOBJS) $(KRB5_BASE_LIBS)
 
 t_trval: t_trval.o
-	$(CC) -o t_trval $(ALL_CFLAGS) t_trval.o
+	$(CC) -o t_trval $(ALL_CFLAGS) $(LDFLAGS) t_trval.o
 
 check:: check-encode check-encode-trval check-decode check-leak
 
